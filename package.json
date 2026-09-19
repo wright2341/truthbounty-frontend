@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node init && next dev",
     "verify-artifacts": "node scripts/verify-artifacts.mjs",
     "prebuild": "node scripts/verify-artifacts.mjs",
-    "build": "next build",
-    "start": "next start",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint src",
     "type-check": "tsc --noEmit",
     "test": "jest",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "test:a11y": "jest --runInBand src/__tests__/accessibility"
   },
   "dependencies": {
